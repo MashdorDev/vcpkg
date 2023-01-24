@@ -31,7 +31,7 @@ I recommand installing globally, and placing the repo in short install path like
 
 ## 3.1. Step 1: Clone the vcpkg repo
 
-```git
+```haskell
 git clone https://github.com/Microsoft/vcpkg.git
 ```
 
@@ -46,7 +46,7 @@ open git-bash, then type `code .bash_profile`
 
 paste in the code:
 
-```git
+```haskell
 #vcpkg
 export PATH=$PATH:/c/ProgramData/vcpkg
 ```
@@ -58,7 +58,7 @@ save the file and close the editor
 open Visual Studio 2015 Update 3 or newer, click `CTRL` + `` ` `` it will open the integrated terminal, click the cogwheel or gear icon.
 make sure it open in Environment > Terminal, click `Add` and input this
 
-```git
+```haskell
 Name: Git-Bash
 Shell Location: c:\program files\git\bin\bash.exe
 Arguments: --login -i
@@ -80,7 +80,7 @@ find a package that you want to use, in this case we going to install GLM
 
 to install this package we will input this command
 
-```git
+```haskell
 vcpkg install glm
 ```
 you can find each package installation command by searching it in the <a href="https://vcpkg.io/en/packages.html">vcpkg website</a> and clicking on the `View Details`
@@ -90,7 +90,7 @@ you can find each package installation command by searching it in the <a href="h
 
 by default vcpkg will install the x86 version if you want the x64 version attach `:x64-windows` in the end of the command like this
 
-```git
+```haskell
 vcpkg install glm:x64-windows
 ```
 
@@ -99,13 +99,13 @@ you can choose other versions
 
 ## 3.6. Step 6: Include in your project:
 after the installation of the package run the command:
-```git
+```haskell
 vcpkg integrate install
 ```
 this will enable the global packages to be included in your project
 
 this is the console response 
-```git
+```haskell 
 Applied user-wide integration for this vcpkg root.
 CMake projects should use: "-DCMAKE_TOOLCHAIN_FILE=C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
 
