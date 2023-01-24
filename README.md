@@ -70,7 +70,7 @@ vcpkg install glm
 ```
 you can find each package installion command by searching it and clicking on the `View Details`
 
-<img src="Assets/GLMDetails.gif" align="center" width="50%">
+<img src="Assets/GLMDetails.gif" align="center" >
 
 
 by default vcpkg will install the x86 version if you want the x64 version attach `:x64-windows` in the end of the command like this
@@ -80,7 +80,7 @@ vcpkg install glm:x64-windows
 ```
 
 you can choose other versions
-<img style="box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important; border-radius: 8px;" align="center" src="Assets\vscpkg.png" >
+<img align="center" src="Assets\vscpkg.png" >
 
 ### Step 6: Include in your project:
 after the installation of the package run the command:
