@@ -1,7 +1,7 @@
 # 1. Installing & using vcpkg
 <ins> About</ins> <br>
 
->vcpkg is a free C/C++ package manager for acquiring and managing libraries. 
+> vcpkg is a free C/C++ package manager for acquiring and managing libraries. 
 Choose from over 1500 open source libraries to download and build in a single step or add
 your own private libraries to simplify your build process. Maintained by the Microsoft - C++ team and open source contributors.  
 
@@ -83,7 +83,7 @@ to install this package we will input this command
 ```git
 vcpkg install glm
 ```
-you can find each package installion command by searching it and clicking on the `View Details`
+you can find each package installation command by searching it in the <a href="https://vcpkg.io/en/packages.html">vcpkg website</a> and clicking on the `View Details`
 
 <img src="Assets/GLMDetails.gif" align="center" >
 
@@ -139,5 +139,8 @@ Done!
 
 
 <hr>
-
+<font size="1px">
 Written by <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<a>
+
+for further documentation refer to <a href="https://vcpkg.io/en/docs/README.html"> vcpkg docs</a>
+</font>
