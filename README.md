@@ -70,7 +70,7 @@ vcpkg install glm
 ```
 you can find each package installion command by searching it and clicking on the `View Details`
 
-<img src="assets/GLMDetails.gif" align="center" width="50%">
+<img src="https://github.com/MashdorDev/vcpkg/blob/main/Assets/GLMDetails.gif?raw=true" align="center" width="50%">
 
 
 by default vcpkg will install the x86 version if you want the x64 version attach `:x64-windows` in the end of the command like this
