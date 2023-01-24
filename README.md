@@ -1,34 +1,46 @@
-# Installing & using vcpkg
+# 1. Installing & using vcpkg
 <ins> About</ins> <br>
 
 >vcpkg is a free C/C++ package manager for acquiring and managing libraries. 
 Choose from over 1500 open source libraries to download and build in a single step or add
-your own private libraries to simplify your build process. Maintained by the Microsoft 
-C++ team and open source contributors.  
+your own private libraries to simplify your build process. Maintained by the Microsoft - C++ team and open source contributors.  
+
+ [Installing \& using vcpkg](#installing--using-vcpkg)
+- [1. Installing \& using vcpkg](#1-installing--using-vcpkg)
+- [2. Prerequisites -](#2-prerequisites--)
+- [3. Install vcpkg](#3-install-vcpkg)
+  - [3.1. Step 1: Clone the vcpkg repo](#31-step-1-clone-the-vcpkg-repo)
+  - [3.2. Step 2: installing vscpkg](#32-step-2-installing-vscpkg)
+  - [3.3. Step 3: Adding vscpkg command into bash](#33-step-3-adding-vscpkg-command-into-bash)
+  - [3.4. \[Optional\] Step 4: add git-bash into Visual Studio](#34-optional-step-4-add-git-bash-into-visual-studio)
+  - [3.5. Step 5: Add a new package](#35-step-5-add-a-new-package)
+  - [3.6. Step 6: Include in your project:](#36-step-6-include-in-your-project)
+
+
           
-## Prerequisites -
+# 2. Prerequisites -
 
     • Windows 7 or newer
     • Visual Studio 2015 Update 3 or newer
     • Visual Studio Code 1.20 2017 or newer
     • Git-Bash
 
-## Install vcpkg
+# 3. Install vcpkg
 
 I recommand installing globally, and placing the repo in short install path like: `C:\src\vcpkg` or `C:\dev\vcpkg`, since otherwise you may run into path issues for some port build systems.
 
-### Step 1: Clone the vcpkg repo
+## 3.1. Step 1: Clone the vcpkg repo
 
 ```git
 git clone https://github.com/Microsoft/vcpkg.git
 ```
 
-### Step 2: installing vscpkg
+## 3.2. Step 2: installing vscpkg
 
 in the vscpkg open git-bash and type `.\bootstrap-vcpkg.bat`
 this will install vscpkg in the folder
 
-### Step 3: Adding vscpkg command into bash
+## 3.3. Step 3: Adding vscpkg command into bash
 
 open git-bash, then type `code .bash_profile`
 
@@ -41,7 +53,7 @@ export PATH=$PATH:/c/ProgramData/vcpkg
 
 save the file and close the editor
 
-### [Optional] Step 4: add git-bash into Visual Studio
+## 3.4. [Optional] Step 4: add git-bash into Visual Studio
 
 open Visual Studio 2015 Update 3 or newer, click `CTRL` + `` ` `` it will open the integrated terminal, click the cogwheel or gear icon.
 make sure it open in Environment > Terminal, click `Add` and input this
@@ -54,7 +66,10 @@ Arguments: --login -i
 
 the arguments `--login -i` will open our `code .bash_profile`
 
-### Step 5: Add a new package
+⚠️ Note -
+> if you aren't using this method have a terminal open where you cloned the vcpkg open and use `./vcpkg` to use the library, this tutorial will continue as this step being made
+
+## 3.5. Step 5: Add a new package
 
 find a package that you want to use, in this case we going to install GLM
 
@@ -82,7 +97,7 @@ vcpkg install glm:x64-windows
 you can choose other versions
 <img align="center" src="Assets\vscpkg.png" >
 
-### Step 6: Include in your project:
+## 3.6. Step 6: Include in your project:
 after the installation of the package run the command:
 ```git
 vcpkg integrate install
