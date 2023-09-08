@@ -53,6 +53,61 @@ export PATH=$PATH:/c/ProgramData/vcpkg
 
 save the file and close the editor
 
+Adding `vcpkg` to your global commands depends on the operating system you're using. Below are the steps for both Windows and Unix-like systems (Linux/MacOS).
+
+# add vcpkg to the PATH
+### For Windows:
+
+1. **Search for Environment Variables**: Open the Start Menu and search for "Environment Variables," then choose "Edit the system environment variables."
+
+2. **System Properties**: In the System Properties window, click the "Environment Variables" button.
+
+3. **Edit PATH**: Under "System variables," find the `PATH` variable and click "Edit."
+
+4. **Add New Path**: In the Edit Environment Variable window, click "New" and add the full path to your `vcpkg` directory,`C:\src\vcpkg` or `C:\dev\vcpkg` or where you saved it on your local machine.
+
+5. **Save and Exit**: Click "OK" on all open windows to save the changes.
+
+6. **Restart Command Prompt**: You'll need to restart any open Command Prompt windows, or open a new one, for the changes to take effect.
+
+### For Unix-like Systems (Linux/MacOS):
+
+1. **Open Terminal**: Open a terminal window.
+
+2. **Edit Profile**: Use a text editor to open your shell profile script. This is typically `~/.bashrc` for Bash and `~/.zshrc` for Zsh.
+
+    ```bash
+    nano ~/.bashrc  # For Bash
+    # or
+    nano ~/.zshrc  # For Zsh
+    ```
+
+3. **Add to PATH**: Add the following line to the end of the file, adjusting the path as necessary:
+
+    ```bash
+    export PATH=$PATH:/path/to/vcpkg
+    ```
+
+4. **Save and Exit**: Save the file and exit the text editor.
+
+5. **Apply Changes**: Apply the changes to your current session:
+
+    ```bash
+    source ~/.bashrc  # For Bash
+    # or
+    source ~/.zshrc  # For Zsh
+    ```
+
+Now, `vcpkg` should be available as a global command in your system. You can test it by opening a new terminal window and running:
+
+```bash
+vcpkg --version
+```
+
+This should display the installed version of `vcpkg`, confirming that it's accessible globally.
+
+
+
 ## 3.4. [Optional] Step 4: add git-bash into Visual Studio
 
 open Visual Studio 2015 Update 3 or newer, click `CTRL` + `` ` `` it will open the integrated terminal, click the cogwheel or gear icon.
